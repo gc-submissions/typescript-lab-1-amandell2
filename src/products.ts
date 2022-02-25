@@ -1,4 +1,4 @@
-export interface Product {
+export default interface Product {
     name: string;
     price: number;
 }
@@ -16,17 +16,17 @@ let products: Product[] = [
 ]
 
 export function calcAverageProductPrice(products:Product[]): number {
-    let total = 0;
+    let total: number = 0;
     if(products.length === 0){
         return total;
     }else{
     for(let i=0; i<products.length; i++){
         total += products[i].price
     }
-    let average = total/products.length
+    let average: number = total/products.length
     return average;
     }
 }
-let averageProductPrice = calcAverageProductPrice(products);
+let averageProductPrice: number = calcAverageProductPrice(products);
 
 console.log(averageProductPrice);
